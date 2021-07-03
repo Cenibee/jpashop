@@ -1,5 +1,6 @@
 package com.cenibee.inflearn.jpashop;
 
+import com.cenibee.inflearn.jpashop.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
