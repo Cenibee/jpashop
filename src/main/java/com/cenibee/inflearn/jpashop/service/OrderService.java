@@ -8,6 +8,7 @@ import com.cenibee.inflearn.jpashop.domain.item.Item;
 import com.cenibee.inflearn.jpashop.repository.ItemRepository;
 import com.cenibee.inflearn.jpashop.repository.MemberRepository;
 import com.cenibee.inflearn.jpashop.repository.OrderRepository;
+import com.cenibee.inflearn.jpashop.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -63,7 +64,7 @@ public class OrderService {
     }
 
     //검색
-//    public List<Order> findOrders(OrderSearch orderSearch) {
-//        return orderRepository.findAll(orderSearch);
-//    }
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByString(orderSearch);
+    }
 }

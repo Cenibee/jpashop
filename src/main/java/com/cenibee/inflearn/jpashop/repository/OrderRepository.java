@@ -37,11 +37,11 @@ public class OrderRepository {
 
         if (StringUtils.hasText(orderSearch.getMemberName())) {
             if (isFirstCondition) {
-                jpql += "where";
+                jpql += " where";
             } else {
                 jpql += " and";
             }
-            jpql += " m.name like :name";
+            jpql += " m.username like :name";
         }
 
         TypedQuery<Order> query = em.createQuery(jpql, Order.class)
