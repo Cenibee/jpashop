@@ -1,5 +1,6 @@
 package com.cenibee.inflearn.jpashop.service;
 
+import com.cenibee.inflearn.jpashop.domain.item.Book;
 import com.cenibee.inflearn.jpashop.domain.item.Item;
 import com.cenibee.inflearn.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,14 @@ public class ItemService {
     @Transactional
     public void saveItem(Item item) {
         itemRepository.save(item);
+    }
+
+    @Transactional
+    public void updateItem(Long itemId, Book bookParam) {
+        Item findItem = itemRepository.findOne(itemId);
+        findItem.setPrice(bookParam.getPrice());
+        findItem.setName(bookParam.getName());
+        findItem.setStockQuantity(bookParam.getStockQuantity());
     }
 
     public List<Item> findItems() {
