@@ -65,3 +65,11 @@
   - 주문 목록 검색, 취소
   
 ### 끝
+
+## 배운 점
+- thymeleaf 의 간단한 사용법
+- `Model`, `ModelAttribute` 동작
+- 부트 스트랩 및 부트 스트랩 적용방법
+- 병합(merge)과 변경 감지
+- slf4j 간단한 사용법
+- QueryDSL 없는 동적 쿼리
